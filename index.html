@@ -28,34 +28,18 @@
     <h1>Introducing Flora:</h1>
     <h2>An AI integrated lead capture chatbot</h2>
 
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with Flora",
-      "botConversationDescription": "Eco Cleaning Fairies chat assistant!",
-      "botId": "586aa09f-8742-442f-a1f1-db16faa366d6",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "586aa09f-8742-442f-a1f1-db16faa366d6",
-      "webhookId": "9b669d45-db37-4f48-8e70-f733e53812f6",
-      "lazySocket": true,
-      "themeName": "prism",
-      "botName": "Flora",
-      "frontendVersion": "v1",
-      "showPoweredBy": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": []
-      window.botpressWebChat.onEvent(
+    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/586aa09f-8742-442f-a1f1-db16faa366d6/webchat/v2/config.js"></script>
+
+    <script window.botpressWebChat.onEvent(
         function (event) {
           if (event.type === 'LIFECYCLE.LOADED') {
             window.botpressWebChat.sendEvent({ type: 'show' })
           }
         },
         ['LIFECYCLE.LOADED']
-      )
-  });
-</script>
+      )></script>
+
     
 </body>
 
