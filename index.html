@@ -36,15 +36,13 @@
       hostUrl: "https://mediafiles.botpress.cloud/586aa09f-8742-442f-a1f1-db16faa366d6",
       botId: "586aa09f-8742-442f-a1f1-db16faa366d6",
       messagingUrl: "https://cdn.botpress.cloud/webchat/v2",
+      showWidget: false // Set to false to hide the widget icon
     });
-        window.botpressWebChat.onEvent(
-        function (event) {
-          if (event.type === 'LIFECYCLE.LOADED') {
-            window.botpressWebChat.sendEvent({ type: 'show' })
-          }
-        },
-        ['LIFECYCLE.LOADED']
-     )   
+
+    // Wait a moment after initialization and then trigger 'show' event
+    setTimeout(function() {
+      window.botpressWebChat.sendEvent({ type: 'show' });
+    }, 4000); // Adjust delay (1 second here) as needed
     </script>
 
     
