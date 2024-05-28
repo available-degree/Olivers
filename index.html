@@ -29,28 +29,23 @@
     <h2>An AI integrated lead capture chatbot</h2>
     
     <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/586aa09f-8742-442f-a1f1-db16faa366d6/webchat/v2/config.js"></script>
-
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            window.botpressWebChat.init({
-                hostUrl: "https://mediafiles.botpress.cloud/586aa09f-8742-442f-a1f1-db16faa366d6",
-                botId: "586aa09f-8742-442f-a1f1-db16faa366d6",
-                messagingUrl: "https://cdn.botpress.cloud/webchat/v2",
-                showWidget: true
-            });
-
-            window.botpressWebChat.onEvent(
-                function (event) {
-                    if (event.type === 'LIFECYCLE.LOADED') {
-                        window.botpressWebChat.sendEvent({ type: 'show' });
-                    }
-                },
-                ['LIFECYCLE.LOADED']
-            );
+        window.botpressWebChat.init({
+            hostUrl: "https://mediafiles.botpress.cloud/586aa09f-8742-442f-a1f1-db16faa366d6",
+            botId: "YOUR_BOT_ID", // Replace with your actual Bot ID
+            messagingUrl: "https://cdn.botpress.cloud/webchat/v2",
+            showWidget: true
         });
-    </script>
 
+        window.botpressWebChat.onEvent(
+            function (event) {
+                if (event.type === 'LIFECYCLE.LOADED') {
+                    window.botpressWebChat.sendEvent({ type: 'show' });
+                }
+            },
+            ['LIFECYCLE.LOADED']
+        );
+    </script>
     
 </body>
 
