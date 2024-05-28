@@ -29,6 +29,19 @@
     <h2>An AI integrated lead capture chatbot</h2>
 
    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    
+<style>
+  .bp-webchat-container {
+    position: fixed;
+    top: 50vh;
+    right: 0;
+    width: 33%;
+    height: 50vh;
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+</style>
+    
 <script>
     window.botpressWebChat.init({
         // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
@@ -43,12 +56,12 @@
         "botName": "Flora",
  
         // Set the width of the WebChat container and layout to 100% (Full Screen)
-        "containerWidth": "100%25",
-        "layoutWidth": "100%25",
+        //"containerWidth": "100%25",
+        //"layoutWidth": "100%25",
  
         // Hide the widget and disable animations
-        "hideWidget": true,
-        "disableAnimations": true,
+        "hideWidget": false,
+        "disableAnimations": false,
     });
  
     // Opens up the Chatbot by default
