@@ -32,13 +32,13 @@
 
     <script>
         window.botpressWebChat.onEvent(
-          function (event) {
-            if (event.type === 'LIFECYCLE.LOADED') {
-              window.botpressWebChat.sendEvent({ type: 'show' })
-            }
-          },
-          ['LIFECYCLE.LOADED']
-        )
+        function (event) {
+          if (event.type === 'LIFECYCLE.LOADED') {
+            window.botpressWebChat.sendEvent({ type: 'show' })
+          }
+        },
+        ['LIFECYCLE.LOADED']
+      )
     </script>
 </body>
 
