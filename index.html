@@ -39,10 +39,14 @@
       showWidget: false // Set to false to hide the widget icon
     });
 
-    // Wait a moment after initialization and then trigger 'show' event
-    setTimeout(function() {
-      window.botpressWebChat.sendEvent({ type: 'show' });
-    }, 4000); // Adjust delay (1 second here) as needed
+   window.botpressWebChat.onEvent(
+        function (event) {
+          if (event.type === 'LIFECYCLE.LOADED') {
+            window.botpressWebChat.sendEvent({ type: 'show' })
+          }
+        },
+        ['LIFECYCLE.LOADED']
+      );
     </script>
 
     
