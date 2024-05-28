@@ -1,1 +1,1 @@
-Flora: A lead generation chatbot for Eco Cleaning Fairies
+Nora: A lead generation chatbot for Scouse Clean Queen
