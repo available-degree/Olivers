@@ -1,1 +1,1 @@
-Nora: A lead generation chatbot for Scouse Clean Queen
+Nora: A lead generation chatbot for Oliver's Cleaning
